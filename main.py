@@ -1,8 +1,8 @@
-from flask import Flask
+import os
 import threading
 import telebot
 import pandas as pd
-import os
+from flask import Flask
 
 # Render port xatosi bermasligi uchun server
 app = Flask('')
@@ -10,7 +10,7 @@ app = Flask('')
 
 @app.route('/')
 def home():
-  return "Bot ishlayapti!"
+  return 'Bot ishlayapti!'
 
 
 def run():
@@ -22,8 +22,8 @@ def keep_alive():
   t.start()
 
 
-# Bot kodlari va to'g'ri token
-TOKEN = '8922407533:AAGZ5ydMUq_LsLMTjOD0DnRuE05AhevdXAg'
+# Tokenni Render muhitidan olamiz
+TOKEN = os.getenv('TOKEN')
 bot = telebot.TeleBot(TOKEN)
 
 try:
@@ -71,3 +71,4 @@ if __name__ == '__main__':
   keep_alive()
   print('Bot muvaffaqiyatli ishga tushdi!')
   bot.infinity_polling()
+  
