@@ -1,4 +1,3 @@
-import os
 import threading
 import telebot
 import pandas as pd
@@ -22,8 +21,8 @@ def keep_alive():
   t.start()
 
 
-# Tokenni Render muhitidan olamiz
-TOKEN = os.getenv('TOKEN')
+# Token to'g'ridan-to'g'ri yozildi
+TOKEN = '8922407533:AAGZ5ydMUq_LsLMTjOD0DnRuE05AhevdXAg'
 bot = telebot.TeleBot(TOKEN)
 
 try:
