@@ -22,8 +22,8 @@ def keep_alive():
   t.start()
 
 
-# Bot kodlari
-TOKEN = '8922407533:AAGZ5ydMUq_LsLWTjOD0DnRuE05AhevdXAg'
+# Bot kodlari va to'g'ri token
+TOKEN = '8922407533:AAGZ5ydMUq_LsLMTjOD0DnRuE05AhevdXAg'
 bot = telebot.TeleBot(TOKEN)
 
 try:
@@ -71,4 +71,3 @@ if __name__ == '__main__':
   keep_alive()
   print('Bot muvaffaqiyatli ishga tushdi!')
   bot.infinity_polling()
-    
